@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagenes/image-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Subconsultas en MySQL</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html"><button type="button" class="btn btn-primary" id="mi_boton1">Sobre MySql</button></a></li>
+                <li><a href="./consultas.html"><button type="button" class="btn btn-primary" id="mi_boton2">Consultas</button></a></li>
+                <li><a href="./subconsultas.html"><button type="button" class="btn btn-primary" id="mi_boton3">SubConsultas</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="row container-fluid" id="contexto">
+        <div id="texto" class="col-12 contBorder">
+            <h1>Subconsultas en MySQL</h1>
+            <p>
+                Una subconsulta es una consulta dentro de otra consulta. MySQL primero resuelve la de adentro
+                y usa su resultado para responder la de afuera, lo que permite comparar contra valores
+                que se calculan en el momento, como un promedio o una lista de ids.
+            </p>
+        </div>
+    </div>
+
+    <div class="container my-5" id="tarjetas">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-mysql h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">En el WHERE</h5>
+                        <p class="card-text">
+                            Se usa para comparar contra un valor calculado. Por ejemplo, traer los productos
+                            cuyo precio supera al promedio de todos los productos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-mysql h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Con IN</h5>
+                        <p class="card-text">
+                            La subconsulta devuelve una lista de valores y la consulta principal se queda
+                            con los registros que están en esa lista, como los clientes que tienen al menos una compra.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-mysql h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">En el FROM</h5>
+                        <p class="card-text">
+                            El resultado de la subconsulta se usa como si fuera una tabla temporal,
+                            sobre la que se puede volver a filtrar o agrupar. Siempre necesita un alias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <pre class="bloque-codigo"><code>SELECT nombre, precio FROM productos WHERE precio > (SELECT AVG(precio) FROM productos);</code></pre>
+        <p class="descripcion-carrusel">
+            La subconsulta entre paréntesis calcula el precio promedio, y la consulta principal
+            muestra solamente los productos que lo superan.
+        </p>
+    </div>
+
+    <footer>
+        <section>
+            <nav style="display: flex;">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html">Sobre MySql</a></li>
+                    <li><a href="./consultas.html">Consultas</a></li>
+                    <li><a href="./subconsultas.html">SubConsultas</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <img src="./Imagenes/image-removebg-preview.png" alt="Logo MySQL">
+        </section>
+        <section>
+            <p>© Copyright 2026, MySql workbench.<br>Todos los derechos reservados</p>
+        </section>
+    </footer>
+
+</body>
+</html>

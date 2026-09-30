@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagenes/image-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de MySql</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./sobre_mysql.html"><button type="button" class="btn btn-primary" id="mi_boton1">Sobre MySql</button></a></li>
+                <li><a href="./consultas.html"><button type="button" class="btn btn-primary" id="mi_boton2">Consultas</button></a></li>
+                <li><a href="./subconsultas.html"><button type="button" class="btn btn-primary" id="mi_boton3">SubConsultas</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="row container-fluid" id="contexto">
+        <div id="texto" class="col-12 contBorder">
+            <h1>My Sql Workbench</h1>
+            <small></small>
+            <p>
+                MySQL es un sistema de gestión de bases de datos relacionales de código abierto, propiedad de Oracle.
+                Destaca por ser rápido, seguro, fácil de usar y altamente escalable.
+                Organiza la información en tablas conectadas mediante SQL (Structured Query Language) y es el motor detrás de la mayoría de los sitios web de internet,
+                potenciando desde blogs en WordPress hasta plataformas masivas como Facebook y Twitter.
+            </p>
+        </div>
+    </div>
+
+    <div class="container my-5" id="tarjetas">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-mysql h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Código abierto</h5>
+                        <p class="card-text">MySQL se puede descargar y usar gratis,
+                        y su código está disponible para que cualquiera lo revise y lo mejore.
+                        Detrás hay una comunidad enorme de desarrolladores que aporta documentación, 
+                        correcciones y respuestas a dudas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-mysql h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Relacional</h5>
+                        <p class="card-text">Los datos se guardan en tablas de filas y columnas conectadas entre sí mediante claves. 
+                        Por ejemplo, una tabla de clientes se relaciona con una de compras usando el id del cliente,
+                        y así no se repite información.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card tarjeta-mysql h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Multiplataforma</h5>
+                        <p class="card-text">Funciona en Windows, macOS y Linux, así que se puede instalar en casi cualquier computadora.
+                        Además se conecta con lenguajes como Python, PHP y Java,
+                        para que una página o aplicación guarde y lea sus datos desde MySQL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <section>
+            <nav style="display: flex;">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html">Sobre MySql</a></li>
+                    <li><a href="./consultas.html">Consultas</a></li>
+                    <li><a href="./subconsultas.html">SubConsultas</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <img src="./Imagenes/image-removebg-preview.png" alt="Logo MySQL">
+        </section>
+        <section>
+            <p>© Copyright 2026, MySql workbench.<br>Todos los derechos reservados</p>
+        </section>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+html {
+  min-height: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#mi_boton1,
+#mi_boton2,
+#mi_boton3 {
+    background-color: #00618A;
+    border: solid 2px #E48E00;
+    color: #F2F2F2;
+}
+
+#texto {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1100px;
+    border-radius: 3rem;
+}
+
+.tarjeta-mysql {
+    background-color: rgba(0, 97, 138, 0.85);
+    border: solid 2px #E48E00;
+    border-radius: 16px;
+    color: #F2F2F2;
+}
+
+.tarjeta-mysql .card-title {
+    color: #E48E00;
+    font-weight: bold;
+}
+
+.tarjeta-mysql .card-body {
+    padding: 1.75rem;
+}
+
+#carouselExampleCaptions {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+#foto_carrusel1,
+#foto_carrusel2,
+#foto_carrusel3 {
+    height: 450px;
+    object-fit: contain;
+}
+
+   .carousel-caption {
+       background-color: rgba(0, 0, 0, 0.6);
+       border-radius: 10px;
+       padding: 10px;
+   }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to bottom, #00758F, #F29111);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #00758F;
+    border: #00758F solid 0.25rem;
+    color: #F2F2F2;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    height: 15%;
+}
+
+footer section:nth-child(2) {
+    margin: 0 auto;
+}
+
+footer section ul {
+    display: flex;
+    gap: 1rem;
+    padding-inline-start: 0;
+    list-style: none;
+    margin: 0;
+}
+
+footer section ul li {
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer section ul li a {
+    display: flex;
+}
+
+footer img {
+    height: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+@media (max-width: 768px) {
+    #carouselExampleCaptions {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    #foto_carrusel1,
+    #foto_carrusel2,
+    #foto_carrusel3 {
+        height: 280px;
+    }
+}
+
+.bloque-codigo {
+    background-color: #0a0a0a;
+    color: #F2F2F2;
+    border: solid 2px #E48E00;
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    overflow-x: auto;
+    text-align: left;
+}
+
+.slide-codigo .contenido {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem 3.5rem 4rem;
+    background-color: #0a0a0a;
+    color: #F2F2F2;
+    text-align: center;
+}
+
+.descripcion-carrusel {
+    color: #F2F2F2;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 0 1rem;
+}

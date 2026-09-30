@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagenes/image-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Consultas en MySQL</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html"><button type="button" class="btn btn-primary" id="mi_boton1">Sobre MySql</button></a></li>
+                <li><a href="./consultas.html"><button type="button" class="btn btn-primary" id="mi_boton2">Consultas</button></a></li>
+                <li><a href="./subconsultas.html"><button type="button" class="btn btn-primary" id="mi_boton3">SubConsultas</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="row container-fluid" id="contexto">
+        <div id="texto" class="col-12 contBorder">
+            <h1>Consultas en MySQL</h1>
+            <p>
+                Las consultas son las instrucciones que le mandamos a la base de datos para pedirle información.
+                Con SQL podemos elegir qué datos queremos ver, filtrarlos según una condición
+                y unir tablas relacionadas, todo en una sola sentencia.
+            </p>
+        </div>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div id="carrusel_1" class="carousel-item active">
+                <img id="foto_carrusel1" src="./imagenes/Gemini_Generated_Image_99n7td99n7td99n7.jpeg" class="d-block w-100" alt="Infografía del inicio de sesión con una consulta SELECT en MySQL">
+            </div>
+            <div id="carrusel_2" class="carousel-item slide-codigo">
+                <div class="contenido">
+                    <h5>SELECT y WHERE</h5>
+                    <pre class="bloque-codigo"><code>SELECT nombre_usuario, correo_electronico FROM usuarios WHERE id_usuario = 101;</code></pre>
+                    <p>SELECT elige las columnas que queremos ver y WHERE filtra los registros que cumplen la condición.</p>
+                </div>
+            </div>
+            <div id="carrusel_3" class="carousel-item slide-codigo">
+                <div class="contenido">
+                    <h5>JOIN</h5>
+                    <pre class="bloque-codigo"><code>SELECT c.nombre, v.fecha, v.total FROM clientes c INNER JOIN ventas v ON v.id_cliente = c.id_cliente;</code></pre>
+                    <p>JOIN une dos tablas usando una columna en común, en este caso el id del cliente.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <p class="descripcion-carrusel">
+        En el infográfico: al ingresar las credenciales en el formulario, MySQL busca una coincidencia exacta
+        de usuario y contraseña en la base de datos. Si la encuentra, permite el inicio de sesión, y si no, deniega el acceso.
+    </p>
+
+    <footer>
+        <section>
+            <nav style="display: flex;">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html">Sobre MySql</a></li>
+                    <li><a href="./consultas.html">Consultas</a></li>
+                    <li><a href="./subconsultas.html">SubConsultas</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <img src="./Imagenes/image-removebg-preview.png" alt="Logo MySQL">
+        </section>
+        <section>
+            <p>© Copyright 2026, MySql workbench.<br>Todos los derechos reservados</p>
+        </section>
+    </footer>
+
+</body>
+</html>
